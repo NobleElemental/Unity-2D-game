@@ -1,10 +1,19 @@
-﻿using UnityEngine;
+﻿/*
+ *source file name: backgroundController.cs
+ *Name: John Cetin
+ *Student Number: 100955200
+ *last modified by: John Cetin
+ *Date Last Modified: October 30, 2016
+ *Revision History: added main script, added header comments
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class backgroundController : MonoBehaviour {
 
 	[SerializeField]
-	private float speed;
+	private float speed = 0;
 
 	private Transform _transform;
 	private Vector2 _currentPosition;
@@ -23,14 +32,14 @@ public class backgroundController : MonoBehaviour {
 		_currentPosition -= new Vector2 (speed, 0);
 		_transform.position = _currentPosition;
 
-		if (_currentPosition.x <= -38.35f) {
+		if (_currentPosition.x <= -39.73f) {
 			Reset ();
 		}
 	}
 
 	private void Reset(){
 
-		_currentPosition = new Vector2 (-19.15f, 0);
+		_currentPosition = new Vector2 (-20.53f, 0);
 		_transform.position = _currentPosition;
 	}
 }
